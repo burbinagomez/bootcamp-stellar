@@ -2,7 +2,7 @@
 
 **Nombre:** Joann Cruz 
 
-**Usuario de GitHub:** JoannC1907:42 PM
+**Usuario de GitHub:** JoannC19
 
 ---
 

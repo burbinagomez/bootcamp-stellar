@@ -4,29 +4,20 @@
 
 ### Problema elegido
 
-> El problema ganador en una frase, sin mencionar blockchain, y quién lo propuso.
-
-La dificultad para verificar la autenticidad y trazabilidad de productos y residuos orgánicos a lo largo de la cadena logística, desde el campo hasta el consumidor final. Fue propuesto por el equipo como una oportunidad real para mejorar la confianza, la sostenibilidad y la transparencia en la distribución de alimentos y residuos.
+Los alimentos, sus excedentes y los residuos orgánicos que generan no pueden verificarse a lo largo de la cadena, desde el campo hasta el consumidor final o el compostaje: nadie puede comprobar de dónde vienen, por qué manos pasaron ni a dónde fueron a parar. Lo tomé de una de las propuestas individuales del equipo y le sumé el enfoque de excedentes y desperdicio de alimentos de otra.
 
 ### Por qué elegimos este
 
-> Qué inclinó al equipo por este problema frente a los demás, según los criterios de la Sesión 1.
-
-Porque afecta a varias partes de la cadena: productores, transportistas, distribuidores, retailers y consumidores, y además tiene impacto ambiental y económico. La falta de trazabilidad genera fraude, productos no auténticos, desperdicio de alimentos y dificultades para aprovechar correctamente los residuos orgánicos como abono. Además, el problema es observable, repetitivo y tiene un claro valor social y operativo, lo que permite plantear una solución con fuerte pertinencia para blockchain.
+Lo elegí porque dos de las tres propuestas individuales apuntaban al mismo flujo: alimentos cuyo origen y destino no se pueden demostrar. Al unirlas, el problema cubre la cadena completa, desde la cosecha hasta el excedente y el abono. Además cumple dos criterios de la Sesión 1: varias partes que no confían entre sí (productor, transportista, distribuidor, comerciante, restaurante o comedor, consumidor y gestor de residuos) necesitan compartir un mismo registro, y el historial de cada lote no debería poder alterarse. Tiene también un impacto económico y ambiental medible: en Colombia se pierde o desperdicia cerca de una de cada tres toneladas de alimentos disponibles.
 
 ### Propuestas descartadas
 
-> Cada propuesta considerada, quién la propuso y el motivo del descarte.
-
-- Pago digital para microempresarios en zonas rurales: propuesta secundaria del equipo, pero se consideró más enfocada en la inclusión financiera que en el problema de trazabilidad real de la cadena de valor.
-- Verificación de origen de productos de lujo: sugerida por un integrante, pero se descartó por ser demasiado específica y menos relevante para el impacto colectivo y ambiental del proyecto.
-- Compra y venta de energías renovables: propuesta discutida, pero se descartó porque depende de marcos regulatorios y mercados energéticos más complejos que la logística de alimentos y residuos.
+- **Historial de vehículos usados en Colombia.** Se descartó porque una parte del historial ya la cubre el RUNT (propietarios, SOAT, revisión técnico-mecánica) y el resto depende de que talleres y aseguradoras, que hoy no tienen incentivo para hacerlo, registren su información. Esas eran justamente las dos dudas que la propia propuesta dejaba por validar.
+- **Trazabilidad del desperdicio de alimentos.** No se descartó: se integró al problema elegido como la parte de excedentes, donaciones y residuos de los servicios de alimentación.
 
 ### Cómo tomamos la decisión
 
-> Cómo llegó el equipo al acuerdo: votación, consenso tras debate u otro.
-
-Se realizó una discusión grupal para priorizar problemas con alto impacto, alcance real y capacidad de solución con trazabilidad verificable. Tras comparar varias opciones, el equipo consensuó que la autenticidad y trazabilidad de productos y residuos orgánicos era la propuesta más sólida, porque conecta producción, distribución, consumo y reutilización de residuos de manera clara y medible.
+Cada integrante planteó un problema en su propuesta individual. Yo las comparé y vi que dos de ellas describían el mismo problema desde las dos puntas de la cadena: el origen del producto y el destino de lo que sobra. Decidí unirlas en un solo problema y dejar de lado la propuesta de vehículos, que no se conectaba con las otras dos y que en parte ya cubre el RUNT.
 
 ---
 
@@ -34,80 +25,93 @@ Se realizó una discusión grupal para priorizar problemas con alto impacto, alc
 
 ### Encabezado
 
-> Nombre del proyecto y una frase que describa el problema. Extensión: breve.
-
-Trazabilidad de origen y autenticidad sostenible. Cuando los productos y los residuos orgánicos no pueden verificarse desde el campo hasta el consumidor final, se pierde confianza, se favorece el fraude y se desperdicia valor ambiental y económico.
+Origen. Cuando los alimentos, sus excedentes y los residuos orgánicos no pueden verificarse desde el campo hasta el consumidor final o el compostaje, se pierde confianza, queda espacio para el fraude y se desperdicia valor económico y ambiental.
 
 ### Equipo y roles
 
-> Integrantes con su usuario de GitHub, rol asumido por cada persona, responsable de las entregas y canal de coordinación interna. Extensión: breve.
+El equipo tiene tres integrantes. Cada uno planteó un problema en su propuesta individual, que está en `docs/semana1/`:
 
-Equipo de trabajo: Brayan Urbina, responsable de validación del problema, documentación y coordinación interna; miembros del equipo con roles de producto, investigación y presentación. Canal de coordinación: GitHub, reuniones semanales y seguimiento por tareas compartidas.
+- Trazabilidad de productos y residuos orgánicos desde el campo hasta el consumidor final (base del problema elegido).
+- Trazabilidad del desperdicio de alimentos en servicios de alimentación (integrada al problema elegido).
+- Historial de vehículos usados en Colombia (descartada).
+
+A partir de esas propuestas, yo elegí el problema, elaboré este Problem Brief y diseñé la propuesta escogida.
+
+Canal de coordinación: el repositorio y el tablero Kanban en GitHub.
 
 ### Problema y evidencia
 
-> Enunciado del problema en una frase, sin mencionar blockchain. Contexto, frecuencia y alcance. Evidencia mínima de que el problema existe: observación directa, experiencia propia, conversaciones o fuentes consultadas, con enlace o cita cuando aplique. Extensión: 150–300 palabras.
+Los alimentos que salen del campo, sus excedentes y los residuos orgánicos que generan no pueden verificarse a lo largo de la cadena logística. En cada cambio de manos (de la finca al transporte, al centro de acopio, al distribuidor y al comerciante o al restaurante) el origen, la calidad y la identidad del lote quedan anotados de forma parcial, en registros que cada actor guarda a su manera. Lo mismo pasa al final: nadie puede demostrar cuánto alimento sobró, si se vendió, se donó o terminó en la basura, ni si un residuo orgánico viene de un origen limpio y sirve para compostaje. Es un problema diario, porque ocurre con cada lote que se mueve, y alcanza a toda la cadena de alimentos frescos.
 
-El problema consiste en que productos agrícolas, alimentos y residuos orgánicos no pueden verificarse fácilmente a lo largo de la cadena logística: desde el origen en el campo, pasando por procesos de transporte, almacenamiento, distribución y venta, hasta llegar al consumidor final o al tratamiento para convertirlos en abono. En muchos casos, el origen real, la calidad, la identidad del lote y la trazabilidad del residuo no quedan registrados de forma confiable. Esto genera fraude, dudas sobre autenticidad, pérdida de valor y dificultad para reutilizar residuos orgánicos en procesos sostenibles.
+Evidencia:
 
-La evidencia aparece en conversaciones con productores, distribuidores y consumidores que reportan dificultades para confirmar dónde se produjo un alimento, si fue manipulado o si un residuo orgánico proviene realmente de un origen limpio y verificable. En la práctica, gran parte de la información se maneja en documentos físicos, mensajes o hojas de cálculo, que pueden perderse, alterarse o no compartirse entre todos los actores. El resultado es una cadena de suministro poco transparente, que afecta la confianza del cliente, la eficiencia operativa y la recuperación de valor de los desechos orgánicos.
+- **Fuentes consultadas.** Según un estudio del DNP, en Colombia se pierden o desperdician 9,76 millones de toneladas de alimentos al año, el 34 % de la oferta disponible ([Semana](https://www.semana.com/pais/articulo/colombianos-desperdician-9-millones-de-toneladas-de-comida/221786/)). La FAO estima que cerca del 60 % de esa pérdida y desperdicio ocurre antes del consumo, en producción, transporte y almacenamiento ([Tetra Pak, citando a la FAO](https://www.tetrapak.com/es-co/about-tetra-pak/news-and-events/newsarchive/colombia-pierde-9-76-millones-de-toneladas-de-alimentos-al-ano--)), justo los tramos donde hoy no queda un registro compartido.
+- **Propuestas individuales.** Una de las propuestas individuales describe que cada actor maneja su propia información y que, cuando surge una duda sobre el origen o el manejo de un producto, no existe una evidencia común que resuelva el conflicto. Otra señala que los servicios de alimentación no tienen datos de cuánto alimento se bota o se dona.
+- **Pendiente.** Validar el problema con conversaciones directas con productores, comerciantes y comedores comunitarios (ver supuestos).
 
 ### Usuario y actores
 
-> Quién sufre el problema y qué necesita resolver. Cómo lo resuelve hoy y qué le cuesta en dinero, tiempo o esfuerzo. Demás actores que intervienen en el flujo, con el papel que cumple cada uno. Extensión: 150–300 palabras.
+El usuario principal es la persona que compra alimentos o productos agrícolas y quiere confiar en que lo que recibe es auténtico, seguro y viene de donde dice. Junto a ella sufren el problema los actores que necesitan demostrar algo: el productor honesto, que no puede probar el origen de su cosecha, y los restaurantes, comedores comunitarios y comerciantes, que no pueden demostrar a dónde fue a parar el alimento que les sobró.
 
-El usuario principal es cualquier persona que compra alimentos o productos agrícolas y quiere confiar en que lo que recibe es auténtico, seguro y conforme a su origen. También importa la persona o entidad que genera residuos orgánicos y desea reutilizarlos en compostaje o abono, asegurando que ese material tenga un origen verificable y no esté contaminado. El problema afecta tanto al consumidor final como a productores, distribuidores, retailers y gestores de residuos.
+Hoy lo resuelven con facturas y remisiones en papel, cuadernos, hojas de cálculo y mensajes de WhatsApp que cada uno guarda a su manera. Eso cuesta tiempo para confirmar datos, aumenta los errores y hace casi imposible demostrar autenticidad cuando surge una disputa. Cuesta dinero, porque se paga igual por un producto dudoso que por uno auténtico y se pierden lotes completos ante una queja que no se puede aclarar. Y cuesta valor ambiental, porque sin datos de cuánto sobra ni en qué estado, el excedente termina en la basura en lugar de donarse o convertirse en abono.
 
-Hoy, muchas de estas personas resuelven la situación con facturas físicas, registros manuscritos, mensajes de WhatsApp o hojas de cálculo. Esto exige tiempo extra para confirmar datos, aumenta la posibilidad de errores y hace muy difícil demostrar autenticidad cuando surge una disputa. Las pérdidas no son solo financieras: también hay impacto en la confianza del cliente, en la sostenibilidad y en la calidad del proceso de reciclaje y abono.
+Actores que intervienen:
 
-Los actores involucrados son: el productor del campo, que necesita demostrar el origen de la cosecha; el transportista, que mueve el producto entre puntos; el distribuidor o centro de acopio, que almacena y clasifica; el vendedor o retailer, que necesita confirmar la calidad de lo que ofrece; y el consumidor final, que quiere saber qué está comprando. Además, intervienen quienes gestionan residuos orgánicos para convertirlos en compostaje o abono, quienes necesitan verificar el origen y la limpieza del material.
+- **Productor:** cosecha y arma el lote; necesita demostrar su origen.
+- **Transportista:** lleva el lote entre la finca, el acopio y la distribución.
+- **Centro de acopio o distribuidor:** almacena, clasifica y vende a comerciantes y restaurantes.
+- **Comerciante:** necesita confirmar la calidad y el origen de lo que ofrece.
+- **Restaurante o comedor comunitario:** prepara alimentos y decide si el excedente se vende, se dona (por ejemplo, a un banco de alimentos) o va a compostaje.
+- **Consumidor final:** quiere saber qué está comprando.
+- **Gestor de residuos orgánicos:** convierte los residuos en compostaje o abono y necesita verificar que el material es limpio.
 
 ### Flujo actual de valor
 
-> Recorrido paso a paso de cómo se mueve hoy el dinero, la información o el activo, desde el origen hasta el destino. Diagrama o secuencia numerada, con los intermediarios explícitos. Señalar si algún paso responde a una obligación normativa. Extensión: 150–300 palabras.
-
-1. El productor cosecha o genera un producto o residuo orgánico en el campo o en una operación agrícola.
-2. La información del lote se registra de forma parcial, normalmente en papel, Excel o sistemas desconectados.
-3. El transporte lleva el producto hacia centros de acopio, almacenamiento o distribución.
-4. En cada punto, el producto o residuo pasa por inspecciones, clasificación y cambio de manos, pero la trazabilidad no siempre queda integrada.
-5. El distribuidor vende al retailer o consumidor final, aunque no siempre puede comprobar la autenticidad o el origen exacto del lote.
-6. En el caso de residuos orgánicos, estos se reutilizan como abono o compostaje, pero sin evidencia clara de origen limpio o de manejo correcto.
+1. El productor cosecha y arma el lote en la finca.
+2. La información del lote (origen, fecha, cantidad, calidad) se registra de forma parcial, en papel, Excel o mensajes, y se queda con el productor.
+3. El transportista lleva el lote al centro de acopio o al distribuidor, con una remisión o factura en papel como único respaldo.
+4. En el acopio y la distribución el lote se inspecciona, se clasifica y cambia de manos. Cada actor anota en sus propios registros y la trazabilidad no queda integrada. *Obligación normativa:* las inspecciones de calidad e inocuidad responden a la normativa sanitaria de alimentos.
+5. El distribuidor vende al comerciante o al restaurante, y estos al consumidor final, sin poder comprobar el origen exacto del lote.
+6. Lo que sobra en comerciantes, restaurantes y comedores se vende, se dona o se entrega como residuo orgánico al gestor de residuos para compostaje o abono, sin evidencia de su lote de origen, su cantidad ni su manejo. *Obligación normativa:* la [Ley 1990 de 2019](https://alertas.directoriolegislativo.org/wp-content/uploads/2019/08/LEY-1990-DE-2019.pdf) fija un orden de prioridad para el alimento que sobra: primero reducir la pérdida, luego destinarlo al consumo humano, por ejemplo con donaciones, y solo después aprovecharlo como residuo orgánico.
 7. Cuando surge una queja, contaminación, fraude o diferencia de calidad, la cadena de evidencia es difícil de reconstruir.
 
-En este flujo intervienen productores, transportistas, almacenes, distribuidores, vendedores y gestores de residuos. Además, existen obligaciones regulatorias relacionadas con seguridad alimentaria, control de calidad, manejo de residuos y trazabilidad sanitaria, que exigen documentación adecuada y verificable, pero no siempre se cumplen de forma consistente.
+Intermediarios entre el productor y el consumidor final: transportista, centro de acopio o distribuidor, y comerciante o restaurante. Para lo que sobra intervienen además los bancos de alimentos y los gestores de residuos. Ninguno de ellos concentra la información: cada uno guarda solo su parte del recorrido.
 
 ### Fricciones identificadas
 
-> Puntos concretos donde el flujo falla, se encarece o se demora. Cada fricción indica en qué paso ocurre, qué la causa y a quién afecta. Extensión: 150–300 palabras.
+**Fricción 1 (pasos 2 y 4): no hay un registro compartido y verificable del lote.** Cada actor anota el origen, la calidad y la entrega en sus propios registros, que no se comparten y se pueden perder o alterar. Afecta al productor, que no puede probar el origen de su cosecha; al comerciante y al consumidor, que no pueden verificar lo que compran, y al gestor de residuos, que no sabe de qué lote viene el material.
 
-La primera fricción ocurre en los pasos 2 y 4: la información del producto o residuo no queda registrada de forma confiable ni compartida entre actores. La causa es que cada parte usa sus propios registros, sin una visión común ni verificable. Esto afecta a productores, distribuidores, consumidores y gestores de residuos, porque no pueden demostrar la autenticidad ni la cadena de custodia del material.
+**Fricción 2 (paso 7): el historial no se puede reconstruir cuando hay un problema.** Ante una queja, una contaminación o una sospecha de fraude hay que perseguir papeles y mensajes entre varios actores. Esto provoca retrasos, disputas, devoluciones de lotes completos y daño a la reputación. Afecta sobre todo al distribuidor y al comerciante, y al productor honesto, que termina pagando por la duda.
 
-La segunda fricción aparece cuando se detecta un problema de calidad, contaminación o fraude: no hay una forma clara de reconstruir el historial del lote. Esto provoca retrasos, disputas, pérdidas económicas y riesgo para la reputación. La tercera fricción se presenta en la reutilización de residuos orgánicos: sin validación del origen, es difícil saber si el material es apto para compostaje o abono, o si cumple con estándares de calidad y seguridad.
+**Fricción 3 (paso 6): no se sabe a dónde va lo que sobra.** Nadie registra cuánto excedente hubo ni si se vendió, se donó o se botó, y sin el lote de origen no se puede saber si un residuo es apto para compostaje. Afecta a los restaurantes y comedores, que no pueden demostrar que aprovechan sus excedentes; al gestor de residuos, que no puede garantizar un abono limpio, y a quien compra ese abono.
 
-En resumen, el problema no es solo la falta de datos, sino la falta de una trazabilidad compartida y verificable que se mantenga en toda la cadena, desde el campo hasta el usuario final y la valorización del residuo orgánico.
+Las tres fricciones tienen la misma raíz: falta una trazabilidad compartida y verificable que acompañe al lote desde la finca hasta el consumidor final o el compostaje.
 
 ### Oportunidad e hipótesis
 
-> Oportunidad priorizada entre las fricciones identificadas, con el motivo de la elección. Hipótesis inicial de por qué blockchain podría mejorar ese punto, expresada en términos de qué cambiaría para el usuario. Extensión: 150–300 palabras.
+Prioricé la **fricción 1 (pasos 2 y 4)**: la falta de una trazabilidad compartida y verificable del lote. La elegí porque es la raíz de las otras dos. Si el origen y cada cambio de manos quedan registrados desde la finca, el historial se puede reconstruir en minutos cuando hay una queja (fricción 2) y el excedente o el residuo se puede ligar a su lote de origen (fricción 3). Sin ese registro, ninguna de las otras dos tiene solución.
 
-La fricción priorizada es la ausencia de trazabilidad verificable en toda la cadena de producción y residuos orgánicos. Es la oportunidad clave porque afecta la confianza del consumidor, la eficiencia de la operación y la capacidad de reutilizar de forma segura los desechos como abono. Si cada lote pudiera identificarse y validarse desde el origen hasta el destino final, el sistema tendría menos fraude, más transparencia y mejor aprovechamiento de los materiales.
+La hipótesis es que un registro en blockchain, compartido por todos los actores, permitiría que cada uno firme su propio evento (cosecha, entrega, recepción, destino del excedente) en un historial que ninguno controla por sí solo y que nadie puede editar después. Para los usuarios cambiaría lo siguiente:
 
-La hipótesis es que un sistema basado en blockchain podría crear un registro compartido e inalterable para cada lote de producto o residuo, con información sobre origen, transporte, manipulación y destino final. Esto cambiaría para los usuarios la experiencia de compra: podrían verificar autenticidad, conocer el origen del producto y saber si el residuo generado fue gestionado correctamente. Para los productores y distribuidores, significaría menos pérdidas por dudas de calidad, más confianza con el cliente y una mejor valoración de los desechos orgánicos para compostaje o abono.
+- El consumidor final podría escanear un código y ver de qué finca viene el lote y por qué manos pasó antes de comprarlo.
+- El comerciante podría decidir si acepta un lote mirando si su historial está completo o tiene saltos.
+- El productor honesto podría diferenciar su producto con evidencia y no solo con su palabra.
+- El restaurante o comedor podría demostrar a dónde fue cada excedente, y el gestor de residuos, que su abono viene de material limpio.
 
 ### Criterio de pertinencia
 
-> Justificación de por qué el caso requiere un registro distribuido y no una base de datos tradicional o una integración entre sistemas existentes. Debe apoyarse en al menos uno de los criterios de la Sesión 1: varias partes que no confían entre sí necesitan compartir un mismo registro, el histórico no puede alterarse, o se elimina un intermediario que hoy concentra la confianza. Extensión: 150–300 palabras.
+Este caso se apoya en dos criterios de la Sesión 1.
 
-Este caso requiere un registro distribuido porque hay varias partes con intereses distintos y sin confianza plena entre sí: productor, transportista, distribuidor, retailer, consumidor y gestor de residuos. Todas necesitan compartir la misma evidencia sobre el origen, la manipulación y la transferencia del producto o residuo, sin depender de un único actor que controle la información. Un sistema centralizado suele concentrar la confianza en un operador o empresa, pero eso no resuelve la necesidad de transparencia entre actores diferentes.
+**Varias partes que no confían entre sí necesitan compartir un mismo registro.** Productor, transportista, centro de acopio, distribuidor, comerciante, restaurante o comedor, consumidor y gestor de residuos tienen intereses distintos: quien vende quiere vender caro y quien compra quiere pagar por lo que realmente recibe. Hoy la información no está centralizada en nadie: cada actor guarda su parte. Una base de datos tradicional obligaría a que uno de ellos, o una empresa nueva, controle el registro, y los demás tendrían que confiar en que no lo modifique a su favor. Integrar los sistemas existentes tampoco sirve, porque la mayoría de estos actores no tiene sistemas: usa papel, Excel y WhatsApp.
 
-Además, el historial de cada lote debe ser verificable y difícil de alterar, especialmente cuando se presenta una reclamación, una diferencia de calidad o una sospecha de fraude. Un registro distribuido permite que todos los participantes validen una historia común e inmutable. También reduce la dependencia de intermediarios que hoy centralizan la información y pueden generar dudas o retrasos. En este contexto, la trazabilidad del producto y del residuo orgánico no puede depender solo de documentos aislados, sino de un historial compartido y confiable para toda la cadena.
+**El histórico no puede alterarse.** El valor del registro está en que sirva como evidencia cuando hay una reclamación, una diferencia de calidad o una sospecha de fraude. Si un actor pudiera borrar o cambiar un evento pasado, como la fecha de una entrega o el estado en que llegó un lote, el historial dejaría de servir justo cuando más se necesita. Un registro distribuido, donde cada evento queda firmado por quien lo hizo y no se puede editar, permite que todos validen una historia común sin depender de un intermediario que la custodie.
 
 ### Supuestos y riesgos
 
-> Dos o tres supuestos que tendrían que ser ciertos para que la hipótesis funcione, y qué podría invalidarla. Extensión: 150–300 palabras.
+**Supuesto 1:** los actores de la cadena están dispuestos a registrar cada evento del lote. Lo invalidaría que no vean una ventaja concreta, por ejemplo, que el comerciante no prefiera ni pague mejor un lote con historial completo.
 
-Supuesto 1: los actores de la cadena están dispuestos a registrar y compartir datos sobre el origen y manejo de productos y residuos. Si no ven una ventaja concreta, la adopción será baja. Supuesto 2: es posible capturar información confiable en cada etapa del proceso, incluso desde el campo o el punto de recolección. Si la información se registra de forma incompleta o manipulada, la solución pierde valor. Supuesto 3: existe una demanda real por parte de consumidores y reguladores para verificar autenticidad, calidad y sostenibilidad.
+**Supuesto 2:** es posible capturar información confiable desde el origen, incluso en la finca y con conectividad limitada. Lo invalidaría que los datos iniciales se registren incompletos o falsos: un registro inalterable de un dato falso no aporta confianza.
 
-Los riesgos principales son la baja adopción por parte de productores o distribuidores, la falta de estandarización de datos y la dificultad de integrar los sistemas existentes. También existe el riesgo de que la tecnología no resuelva el problema si la información inicial no es confiable, o si el ecosistema no tiene incentivos claros para mantener el registro actualizado. Si cualquiera de estos supuestos falla, la propuesta dejaría de aportar valor real y no lograría mejorar la trazabilidad y la reutilización de residuos orgánicos.
+**Supuesto 3:** existe una demanda real por verificar el origen y el destino de los alimentos. Lo invalidaría que el consumidor no escanee el código o no cambie su decisión de compra al ver el historial, o que los restaurantes y comedores no necesiten demostrar el destino de sus excedentes.
 
-
+Los riesgos principales son la baja adopción por parte de productores y distribuidores, la falta de estandarización de los datos entre actores y la dificultad de registrar eventos desde el campo. Si alguno de los supuestos falla, la solución no mejoraría la trazabilidad de los alimentos ni el aprovechamiento de sus excedentes y residuos, aunque la tecnología funcione.

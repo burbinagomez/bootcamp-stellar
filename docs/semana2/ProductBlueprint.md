@@ -1,6 +1,6 @@
 # Product Blueprint
 
-**Nombre del proyecto:** Trazabilidad de origen y autenticidad sostenible
+**Nombre del proyecto:** Origen
 
 **Repositorio (enlace obligatorio):** [bootcamp-stellar](https://github.com/burbinagomez/bootcamp-stellar)
 
@@ -21,17 +21,17 @@
 
 ## 1. Priorización de historias
 
-**Criterio de priorización:** MoSCoW aplicado sobre las 21 historias del equipo. Una historia es **imprescindible** si sin ella no existe un historial verificable del lote (origen, custodia y consulta). Es **debería** si le da al usuario una razón directa para adoptar la plataforma o cubre la parte de residuos y excedentes del problema. Las historias que dependen de tener meses de datos o de actores que no están en el primer piloto quedan fuera. Las historias repetidas entre integrantes se fusionaron.
+**Criterio de priorización:** MoSCoW aplicado sobre las 21 historias de usuario. Una historia es **imprescindible** si sin ella no existe un historial verificable del lote (origen, custodia y consulta). Es **debería** si le da al usuario una razón directa para adoptar la plataforma o cubre la parte de residuos y excedentes del problema. Las historias que dependen de tener meses de datos o de actores que no están en el primer piloto quedan fuera. Fusioné las historias que se repetían.
 
-| Prioridad | Historia | Propuesta por | Por qué entra al backlog |
-| :---: | --- | :---: | --- |
-| 1 | Como productor agrícola quiero registrar cada lote al momento de la cosecha y obtener un código único, para demostrar de dónde viene mi producto. | Carlos | Imprescindible: es el primer eslabón y todo lo demás se apoya en él. |
-| 2 | Como administrador quiero asignar a cada usuario su rol, para que cada actor solo registre los eventos que le corresponden. | Brayan | Imprescindible: sin roles el historial pierde credibilidad. |
-| 3 | Como transportista, centro de acopio o distribuidor quiero firmar la entrega y la recepción de un lote, para que la cadena de custodia quede registrada y no pueda modificarse. | Carlos y Brayan | Imprescindible: ataca la fricción principal del Problem Brief (pasos 2 y 4). |
-| 4 | Como consumidor final quiero escanear el QR del producto y ver su origen y recorrido, para saber si es auténtico antes de pagar. | Carlos | Imprescindible: es el valor visible para el usuario principal. |
-| 5 | Como comerciante quiero ver un sello que indique si el historial del lote está completo o tiene saltos, para decidir rápido si lo compro. | Brayan | Debería: convierte el historial en una decisión simple y ayuda a la adopción. |
-| 6 | Como restaurante o servicio de alimentos quiero marcar el destino de cada excedente (donado, vendido o compostaje), para demostrar que no termina en la basura. | Joann | Debería: cubre los excedentes y el desperdicio, que son parte del problema elegido. |
-| 7 | Como gestor de residuos orgánicos quiero registrar los residuos recibidos ligados a su lote de origen y marcarlos como aptos o no aptos para compostaje, para garantizar abono de material limpio. | Carlos | Debería: cierra el ciclo del residuo orgánico. |
+| Prioridad | Historia | Por qué entra al backlog |
+| :---: | --- | --- |
+| 1 | Como productor agrícola quiero registrar cada lote al momento de la cosecha y obtener un código único, para demostrar de dónde viene mi producto. | Imprescindible: es el primer eslabón y todo lo demás se apoya en él. |
+| 2 | Como administrador quiero asignar a cada usuario su rol, para que cada actor solo registre los eventos que le corresponden. | Imprescindible: sin roles el historial pierde credibilidad. |
+| 3 | Como transportista, centro de acopio o distribuidor quiero firmar la entrega y la recepción de un lote, para que la cadena de custodia quede registrada y no pueda modificarse. | Imprescindible: ataca la fricción principal del Problem Brief (pasos 2 y 4). |
+| 4 | Como consumidor final quiero escanear el QR del producto y ver su origen y recorrido, para saber si es auténtico antes de pagar. | Imprescindible: es el valor visible para el usuario principal. |
+| 5 | Como comerciante quiero ver un sello que indique si el historial del lote está completo o tiene saltos, para decidir rápido si lo compro. | Debería: convierte el historial en una decisión simple y ayuda a la adopción. |
+| 6 | Como restaurante o servicio de alimentos quiero marcar el destino de cada excedente (donado, vendido o compostaje), para demostrar que no termina en la basura. | Debería: cubre los excedentes y el desperdicio, que son parte del problema elegido. |
+| 7 | Como gestor de residuos orgánicos quiero registrar los residuos recibidos ligados a su lote de origen y marcarlos como aptos o no aptos para compostaje, para garantizar abono de material limpio. | Debería: cierra el ciclo del residuo orgánico. |
 
 ---
 
@@ -116,11 +116,11 @@ El tablero tiene las 7 historias priorizadas en la sección 1, en las columnas *
 
 **Criterio de pertinencia (del Problem Brief):** Varias partes que no confían entre sí (productor, transportista, distribuidor, comerciante, consumidor y gestor de residuos) necesitan compartir un mismo registro, y el histórico de cada lote no puede alterarse.
 
-| Componente de Stellar | Para qué lo usamos | Por qué ese y no otra alternativa |
+| Componente de Stellar | Para qué lo uso | Por qué ese y no otra alternativa |
 | --- | --- | --- |
 | Contratos inteligentes Soroban | Guardar cada lote y sus eventos, y aplicar las reglas: quién puede registrar qué paso y en qué orden. | Las reglas quedan en la red y no en el servidor de un actor, que podría cambiarlas. Una base de datos central volvería a poner la confianza en un solo operador. |
 | Cuentas de Stellar con firma (smart wallets con passkeys) | Que cada actor firme sus eventos con su propia llave, desde el celular y sin frases semilla. | La firma demuestra quién registró cada paso y nadie puede firmar por otro. Las passkeys bajan la barrera para productores sin experiencia en cripto. |
 | Patrocinio de comisiones (fee-bump transactions) | Que la plataforma pague las comisiones de las transacciones de los actores. | El productor o el comedor no tienen que comprar XLM. Las comisiones de Stellar son de fracciones de centavo, lo que hace viable registrar muchos eventos pequeños. |
 | Stellar RPC y eventos del contrato | Leer el historial del lote para la página pública y mantener actualizado el índice de la API. | Permite que cualquier persona verifique el historial directo en la red, sin confiar en la base de datos de la plataforma. |
 
-Para el MVP usamos testnet. Más adelante se podría emitir un activo de Stellar como incentivo para quienes registren cadenas completas, pero queda fuera del alcance actual.
+Para el MVP uso testnet. Más adelante se podría emitir un activo de Stellar como incentivo para quienes registren cadenas completas, pero queda fuera del alcance actual.
