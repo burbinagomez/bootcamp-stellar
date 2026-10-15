@@ -1,0 +1,203 @@
+@import "tailwindcss";
+
+@theme {
+  --color-campo: #dfe7dc;
+  --color-fondo: #f2f4ef;
+  --color-papel: #ffffff;
+  --color-tinta: #15201a;
+  --color-tinta-suave: #4a5750;
+  --color-niebla: #c3ccc5;
+  --color-linea: #d7ddd5;
+  /* Control borders need 3:1 against white (WCAG 1.4.11). */
+  --color-linea-fuerte: #7f8c83;
+  --color-hoja: #1e6b47;
+  --color-hoja-oscura: #15513a;
+  --color-hoja-clara: #e2eee6;
+  --color-menta: #8fd3ac;
+  --color-ocre: #d9a441;
+  --color-sol: #e9c46a;
+  --color-terracota: #c2643a;
+  --color-terracota-oscura: #9a3a0c;
+  --color-terracota-clara: #fbeadf;
+  --color-cielo: #24466b;
+  --color-cielo-claro: #e6ecf3;
+  --color-noche-texto: #a9b5ad;
+
+  --font-display: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-plex-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+
+  /* Green-tinted shadows: depth that belongs to the palette instead of grey smudges. */
+  --shadow-tarjeta: inset 0 1px 0 0 rgb(255 255 255 / 0.9), 0 1px 2px 0 rgb(21 81 58 / 0.07),
+    0 8px 20px -12px rgb(21 81 58 / 0.28);
+  --shadow-elevada: 0 2px 6px -2px rgb(21 81 58 / 0.12), 0 22px 44px -20px rgb(21 81 58 / 0.42);
+  --shadow-boton: inset 0 1px 0 0 rgb(255 255 255 / 0.22), inset 0 -2px 0 0 rgb(0 0 0 / 0.14),
+    0 10px 20px -10px rgb(21 81 58 / 0.65);
+  --shadow-columna: 0 0 0 1px rgb(21 81 58 / 0.06), 0 30px 80px -30px rgb(21 81 58 / 0.45);
+
+  --ease-brote: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --animate-mecer: mecer 7s ease-in-out infinite alternate;
+  --animate-titilar: titilar 3.2s ease-in-out infinite alternate;
+  --animate-respirar: respirar 1.6s ease-in-out infinite;
+
+  @keyframes mecer {
+    from {
+      transform: rotate(-3deg);
+    }
+    to {
+      transform: rotate(3deg);
+    }
+  }
+  @keyframes titilar {
+    from {
+      opacity: 0.35;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes respirar {
+    0%,
+    100% {
+      opacity: 0.55;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+}
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: var(--color-campo);
+    color: var(--color-tinta);
+    font-family: var(--font-sans);
+    font-optical-sizing: auto;
+    text-rendering: optimizeLegibility;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-hoja);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+
+  .tono-noche :focus-visible {
+    outline-color: var(--color-menta);
+  }
+}
+
+body {
+  position: relative;
+  min-height: 100dvh;
+}
+
+/* Paper grain over the whole document; static image, no repaint cost. */
+body::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.07;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.08 0 0 0 0 0.2 0 0 0 0 0.13 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+}
+
+/* Leaf sway: the leaf shapes start at their base (0,0), so the origin is the stem. */
+.mece {
+  transform-origin: 0 0;
+  animation: var(--animate-mecer);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mece {
+    animation: none;
+  }
+}
+
+/* Route transitions (React <ViewTransition>, see components/pantalla.tsx). */
+::view-transition {
+  pointer-events: none;
+}
+
+::view-transition-old(.nav-forward) {
+  --desplazar: -48px;
+  animation:
+    140ms ease-in both desvanecer reverse,
+    360ms var(--ease-brote) both deslizar reverse;
+}
+::view-transition-new(.nav-forward) {
+  --desplazar: 48px;
+  animation:
+    220ms ease-out 120ms both desvanecer,
+    420ms var(--ease-brote) both deslizar;
+}
+::view-transition-old(.nav-back) {
+  --desplazar: 48px;
+  animation:
+    140ms ease-in both desvanecer reverse,
+    360ms var(--ease-brote) both deslizar reverse;
+}
+::view-transition-new(.nav-back) {
+  --desplazar: -48px;
+  animation:
+    220ms ease-out 120ms both desvanecer,
+    420ms var(--ease-brote) both deslizar;
+}
+
+@keyframes desvanecer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes deslizar {
+  from {
+    translate: var(--desplazar) 0;
+  }
+  to {
+    translate: 0 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(*),
+  ::view-transition-new(*),
+  ::view-transition-group(*) {
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+  }
+}
+
+/* Only the QR label prints. */
+@media print {
+  body {
+    background: #fff;
+  }
+  body::after {
+    display: none;
+  }
+  body * {
+    visibility: hidden;
+  }
+  .etiqueta-imprimible,
+  .etiqueta-imprimible * {
+    visibility: visible;
+  }
+  .etiqueta-imprimible {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    width: 80mm;
+    height: fit-content;
+    box-shadow: none !important;
+  }
+}
