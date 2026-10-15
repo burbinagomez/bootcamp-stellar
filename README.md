@@ -18,3 +18,5 @@ npm run dev
 ```
 
 Abre http://localhost:3000 en el navegador.
+
+Versión desplegada: https://origen-two-sigma.vercel.app

@@ -4,6 +4,8 @@
 
 Esta semana se construyó el front de Origen en la carpeta `frontend/`, con Next.js 16 (App Router), React 19, Tailwind CSS 4 y la librería `motion` para las animaciones. La meta fue que se pudiera recorrer de punta a punta el flujo de usuario de la sección 3 del Product Blueprint, con datos de prueba y firmas simuladas, de forma que en la semana 4 solo haya que cambiar la capa de Stellar y no las pantallas.
 
+La versión desplegada está en https://origen-two-sigma.vercel.app (Vercel, con `frontend/` como carpeta raíz).
+
 ### Pantallas y su lugar en el flujo
 
 | Ruta | Rol | Paso del Blueprint | Qué hace |
