@@ -91,7 +91,6 @@ Cada firma de los pasos 2, 4, 5, 7 y 8 es una transacción en Stellar: queda con
 ## 6. Backlog priorizado (Kanban)
 
 **Enlace al tablero (obligatorio):** [Tablero Kanban en GitHub Projects](https://github.com/users/1PcodeP1/projects/1)
-<!-- Verificar el número del proyecto después de crearlo y reemplazar este enlace si es distinto. -->
 
 El tablero tiene las 7 historias priorizadas en la sección 1, en las columnas **Todo / In Progress / Done**, y cada tarjeta incluye sus criterios de aceptación.
 
